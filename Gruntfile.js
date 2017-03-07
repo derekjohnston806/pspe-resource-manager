@@ -7,6 +7,8 @@
     @desc:
       - Provide configuration for the Grunt taskrunner.
 */
+var path = require("path");
+
 module.exports = function (grunt) {
   grunt.initConfig({
     babel: {
@@ -24,12 +26,24 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+    webpack: {
+      default: {
+        entry: {
+          index: "./dist/client/index.js"
+        },
+        output: {
+          path: path.join(__dirname, "public/scripts"),
+          filename: "[name].bundle.js"
+        }
+      }
     }
   });
 
   // Load NPM Grunt packages.
   grunt.loadNpmTasks("grunt-babel");
+  grunt.loadNpmTasks("grunt-webpack");
 
   // Configure the Grunt Tasks.
-  grunt.registerTask("default", ["babel"]);
+  grunt.registerTask("default", ["babel", "webpack"]);
 };

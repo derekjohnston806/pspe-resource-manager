@@ -15,7 +15,8 @@ const port              = process.env.PORT || 8000;
 const publicPath        = path.join(__dirname, "public");
 const staticMiddleware  = express.static(publicPath);
 
-application.use(staticMiddleware);
+//application.use(staticMiddleware);
+application.use(express.static("public"));
 
 application.listen(port, () => {
   console.log("PSPE Resource Manager is up-and-running on port:", port);
