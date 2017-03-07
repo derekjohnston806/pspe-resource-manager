@@ -9,11 +9,17 @@
 */
 import React, { Component } from "react";
 import ReactDOM             from "react-dom";
+import {
+  Navbar,
+  NavbarHeader
+} from "./components";
 
 class Index extends Component {
   render() {
     return <div id="index">
-      <h1>PSPE Resource Management System</h1>
+      <Navbar>
+        <NavbarHeader menuID="header-menu" brand="PSPE Resource Management System" />
+      </Navbar>
     </div>
   }
 }
