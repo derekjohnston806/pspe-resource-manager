@@ -1,0 +1,19 @@
+{
+  "name": "pspe-resource-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekjohnston806/pspe-resource-manager.git"
+  },
+  "author": "Derek Johnston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekjohnston806/pspe-resource-manager/issues"
+  },
+  "homepage": "https://github.com/derekjohnston806/pspe-resource-manager#readme"
+}
